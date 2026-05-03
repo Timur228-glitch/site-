@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гражданская война 1918–1920</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://cdn.pixabay.com/photo/2016/11/21/16/17/war-1846119_1280.jpg') no-repeat center/cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.85);
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  margin: 5px 10px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: crimson;
+  transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+  text-shadow: 3px 3px 10px black;
+  animation: drop 1s ease;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* BUTTONS (только одна) */
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 18px;
+  background: crimson;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: darkred;
+  transform: translateY(-3px);
+}
+
+/* MAIN */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.75);
+}
+
+/* TEXT */
+.text {
+  flex: 2;
+  min-width: 280px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* VIDEO */
+.video {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  border: 3px solid crimson;
+}
+
+/* FOOTER FIX (ПРИЖИМАЕМ ВНИЗ) */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 110px;
+  background: rgba(0,0,0,0.85);
+}
+
+/* ANIMATIONS */
+@keyframes drop {
+  from {opacity:0; transform: translateY(-30px);}
+  to {opacity:1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Главная</a>
+  <a href="intro.html">Причины</a>
+  <a href="sides.html">Стороны</a>
+  <a href="events.html">События</a>
+  <a href="results.html">Итоги</a>
+  <a href="practice.html">Задания</a>
+</nav>
+
+<div class="hero">
+  <h1>⚔️ Гражданская война 1918–1920</h1>
+  <p>Кратко и понятно про историю</p>
+
+  <div class="buttons">
+    <a href="intro.html">Начать изучение</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="text">
+    <h2>📌 О сайте</h2>
+   <p>
+  Гражданская война началась после революционных событий 1917 года, когда страна оказалась в глубоком политическом и социальном кризисе. Старая система власти была разрушена, а новая ещё не успела полностью укрепиться, из-за чего в обществе возникла нестабильность.
+</p>
+
+<p>
+  В этот период Россия фактически разделилась на несколько лагерей. Разные политические силы по-разному представляли будущее страны, и это привело к вооружённому противостоянию и борьбе за контроль над территорией и властью.
+</p>
+
+<p>
+  Здесь ты найдёшь краткое и понятное объяснение основных причин конфликта, узнаешь, какие силы в нём участвовали, и как развивались ключевые события. Также будут рассмотрены итоги войны и её влияние на дальнейшую историю страны.
+</p>
+  </div>
+
+  <div class="video">
+    <h3>🎥 Краткое видео</h3>
+
+    <iframe src="Гражданская война.mp4" allowfullscreen></iframe>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Исторический проект
+</footer>
+
+</body>
+</html>
