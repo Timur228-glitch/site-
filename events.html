@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Основные события</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2015/09/18/19/03/war-944074_1280.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    nav {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a2ff8f;
+    }
+
+    .content {
+      padding: 60px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      min-height: calc(100vh - 100px);
+      animation: fadeIn 1.5s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .image-container {
+      width: 40%;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .text-content {
+      width: 60%;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    h1 {
+      text-align: center;
+      color: #a2ff8f;
+      font-size: 42px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    ol {
+      font-size: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 20px;
+      border-left: 6px solid #a2ff8f;
+      border-radius: 8px;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .bottom-image {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .bottom-image img {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="intro.html">Причины</a>
+    <a href="sides.html">Стороны</a>
+    <a href="events.html">События</a>
+    <a href="results.html">Итоги</a>
+    <a href="practice.html">Задания</a>
+    <a href="quiz.html">Тест</a>
+  </nav>
+
+  <div class="content">
+    <div class="image-container">
+      <img src="12345.jpg" alt="Основные события">
+      <!-- Добавлено дополнительное изображение под первым -->
+      <img src="123456.jpg" alt="Дополнительное изображение" style="margin-top: 20px;">
+    </div>
+
+    <div class="text-content">
+      <h1>Основные события</h1>
+      <ol>
+        <li><strong>1918:</strong> Первыми событиями Гражданской войны стали бои в Петрограде, Москве и Ташкенте. Причем, в последнем городе совместное выступление большевиков и левых эсеров началось еще в сентябре 1917 года.
+          <br><strong>Рис. 1:</strong> Гражданская война 1918.
+          <br>Основными событиями зимы 1917-1918 годов следует считать:
+          <ul>
+            <li>Создание ВЧК.</li>
+            <li>Разгон Учредительного Собрания.</li>
+            <li>Создание Рабоче-Крестьянской Красной Армии.</li>
+            <li>Брестский мир с Германией.</li>
+          </ul>
+          К маю 1918 года положение Советской власти ухудшилось. С запада против неё выступили БНР, УНР и немецкие войска, которые дошли до Новочеркасска, а также Донское казачество. Закавказье оказалось под контролем турецких и германских войск. На огромной территории, от Дальнего Востока до Поволжья, произошло выступление чехословацкого корпуса.
+          <br>Важнейшими событиями июля 1918 года стали:
+          <ul>
+            <li>Расстрел семьи Николая II в Екатеринбурге.</li>
+            <li>Выступление против Советской власти левых эсеров, убийство ими немецкого посла в Москве.</li>
+            <li>Принятие первой советской конституции.</li>
+          </ul>
+          Период с осени 1918 до весны 1919 года был успешным для красных на западном и юго-западном направлениях. Им удалось установить контроль над значительной частью Украины, Беларуси и Крымом.
+          <br><strong>Рис. 2:</strong> Гражданская война 1919.
+        </li>
+        <li><strong>1919:</strong> Наступления белых армий под командованием Колчака на Востоке и Деникина на Юге.</li>
+        <li><strong>1920:</strong> Разгром армии Врангеля в Крыму. Завершение основных боевых действий.</li>
+      </ol>
+      <p><strong>Подробнее:</strong> <a href="https://obrazovaka.ru/istoriya/osnovnye-sobytiya-grazhdanskoy-voyny-v-rossii.html" style="color: #a2ff8f;">История событий</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Исторический проект</p>
+  </footer>
+
+</body>
+</html>

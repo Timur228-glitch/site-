@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест по Гражданской войне</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f7ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      text-align: center;
+      background: #333;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      animation: fadeIn 1.5s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #005580;
+    }
+
+    .quiz-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 5px solid #0099cc;
+      background: #f2f9ff;
+      border-radius: 10px;
+    }
+
+    .question p {
+      font-weight: bold;
+    }
+
+    .answers button {
+      background: #005580;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px 5px 0 0;
+      transition: background 0.3s;
+    }
+
+    .answers button:hover {
+      background: #003d66;
+    }
+
+    #submitBtn {
+      display: block;
+      margin: 30px auto 10px;
+      background: #0099cc;
+      font-size: 16px;
+    }
+
+    #result {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #006600;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .quiz-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Главная</a>
+  <a href="intro.html">Причины</a>
+  <a href="sides.html">Стороны</a>
+  <a href="events.html">События</a>
+  <a href="results.html">Итоги</a>
+  <a href="practice.html">Задания</a>
+  <a href="quiz.html">Тест</a>
+</nav>
+
+<div class="container">
+  <h1>Тест по теме: Гражданская война 1918–1920 годов</h1>
+
+  <div class="quiz-grid">
+    <div class="column" id="leftColumn"></div>
+    <div class="column" id="rightColumn"></div>
+  </div>
+
+  <button id="submitBtn" onclick="showResult()">Завершить тест</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  const questions = [
+    {
+      text: "1. Когда началась Гражданская война?",
+      answers: ["1914", "1918", "1922"],
+      correct: 1
+    },
+    {
+      text: "2. Кто возглавлял Белое движение?",
+      answers: ["Ленин", "Сталин", "Колчак"],
+      correct: 2
+    },
+    {
+      text: "3. Как называлась армия, поддерживавшая большевиков?",
+      answers: ["Красная армия", "Белая армия", "Зелёная армия"],
+      correct: 0
+    },
+    {
+      text: "4. Какой договор вывел Россию из Первой мировой войны?",
+      answers: ["Версальский мир", "Брестский мир", "Берлинский мир"],
+      correct: 1
+    },
+    {
+      text: "5. Кто был главой Советского государства в начале войны?",
+      answers: ["Ленин", "Сталин", "Троцкий"],
+      correct: 0
+    },
+    {
+      text: "6. Где был разгромлен Врангель?",
+      answers: ["В Москве", "На Урале", "В Крыму"],
+      correct: 2
+    },
+    {
+      text: "7. Какой год считается окончанием основных боевых действий?",
+      answers: ["1919", "1920", "1921"],
+      correct: 1
+    },
+    {
+      text: "8. Какой регион был центром Белого движения под командованием Колчака?",
+      answers: ["Сибирь", "Кавказ", "Центральная Россия"],
+      correct: 0
+    },
+    {
+      text: "9. Что произошло в 1922 году?",
+      answers: ["Победа белых", "Создание СССР", "Убийство Ленина"],
+      correct: 1
+    },
+    {
+      text: "10. Какая сторона одержала победу в войне?",
+      answers: ["Белые", "Интервенты", "Красные"],
+      correct: 2
+    }
+  ];
+
+  let correctAnswers = 0;
+
+  function createQuiz() {
+    questions.forEach((q, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.classList.add("question");
+
+      const questionText = document.createElement("p");
+      questionText.textContent = q.text;
+      questionDiv.appendChild(questionText);
+
+      const answersDiv = document.createElement("div");
+      answersDiv.classList.add("answers");
+
+      q.answers.forEach((answer, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.onclick = () => {
+          const siblings = btn.parentNode.querySelectorAll("button");
+          siblings.forEach(b => {
+            b.disabled = true;
+            b.style.background = "#ccc";
+          });
+          if (i === q.correct) {
+            btn.style.background = "green";
+            correctAnswers++;
+          } else {
+            btn.style.background = "red";
+          }
+        };
+        answersDiv.appendChild(btn);
+      });
+
+      questionDiv.appendChild(answersDiv);
+
+      // Добавление вопроса в левую или правую колонку
+      if (index < 5) {
+        document.getElementById("leftColumn").appendChild(questionDiv);
+      } else {
+        document.getElementById("rightColumn").appendChild(questionDiv);
+      }
+    });
+  }
+
+  function showResult() {
+    document.getElementById("result").textContent =
+      `Вы правильно ответили на ${correctAnswers} из ${questions.length} вопросов.`;
+    document.getElementById("submitBtn").disabled = true;
+  }
+
+  createQuiz();
+</script>
+
+</body>
+</html>

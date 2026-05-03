@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Стороны конфликта</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2016/11/21/16/17/war-1846119_1280.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    nav {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00aced;
+    }
+
+    .content {
+      padding: 40px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      min-height: calc(100vh - 100px);
+      animation: fadeIn 1.5s ease-in-out;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap; /* добавляем перенос элементов для мобильных устройств */
+    }
+
+    h1 {
+      text-align: left;
+      color: #fff;
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px black;
+      flex: 1; /* чтобы заголовок занимал оставшееся пространство */
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+      flex: 2; /* текст займет больше места */
+    }
+
+    li {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 8px solid crimson;
+      border-radius: 8px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    strong {
+      color: #ffdddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 100%; /* максимальная ширина 100% */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="intro.html">Причины</a>
+    <a href="sides.html">Стороны</a>
+    <a href="events.html">События</a>
+    <a href="results.html">Итоги</a>
+    <a href="practice.html">Задания</a>
+    <a href="quiz.html">Тест</a>
+  </nav>
+
+  <div class="content">
+    <!-- Блок с текстом -->
+    <div>
+      <h1>Стороны конфликта</h1>
+      <ul>
+        <li>
+          <strong>Красная армия</strong><br>
+          Во главе Красной армии стоял <strong>Лев Троцкий</strong>. Это была армия большевиков, поддерживавших революцию и социалистические идеи. Красная армия сражалась против Белой армии и других контрреволюционных сил. Она стала основным военным орудием Советской власти в годы Гражданской войны.
+        </li>
+
+        <li>
+          <strong>Белая армия</strong><br>
+          Белую армию возглавляли различные военные лидеры, среди которых можно выделить <strong>Антона Деникина</strong>, <strong>Петра Врангеля</strong> и других генералов, поддерживавших старую империю. Белая армия стремилась восстановить монархию или создать республику, в которой не было бы социалистической власти.
+        </li>
+
+        <li>
+          <strong>Украинская армия</strong><br>
+          Украинская армия, или <strong>Армия УНР</strong>, воевала за независимость Украины и против Советской власти. Главнокомандующими были <strong>Михаил Грушевский</strong> и <strong>Симон Петлюра</strong>. Армия УНР была одной из важных сторон конфликта на территории Украины.
+        </li>
+
+        <li>
+          <strong>Армия Колчака</strong><br>
+          Армия, созданная <strong>Александром Колчаком</strong>, известная как <strong>Армия Колчака</strong>, пыталась установить диктатуру на территории Сибири и Урала. Колчак был признан верховным правителем России в 1918 году и возглавил военные действия против большевиков на Востоке страны.
+        </li>
+
+        <li>
+          <strong>Антанта</strong><br>
+          Страны Антанты (включая Великобританию, Францию, США) оказывали поддержку белым, надеясь на сохранение антибольшевистских режимов. Вмешательство Антанты стало одним из факторов, оказавших влияние на ход войны.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Блок с изображением -->
+    <div class="image-container">
+      <img src="1234.jpg" alt="Стороны конфликта">
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Исторический проект</p>
+  </footer>
+
+</body>
+</html>
